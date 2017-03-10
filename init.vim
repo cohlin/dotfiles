@@ -43,7 +43,6 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
-Plug 'cohlin/vim-colorschemes'
 
 
 " Ag
@@ -82,6 +81,8 @@ Plug 'honza/vim-snippets'
 
 "" Color
 Plug 'rakr/vim-one'
+Plug 'cohlin/vim-colorschemes'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 "*****************************************************************************
 "" Custom bundles
@@ -175,7 +176,8 @@ set number
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
     "colorscheme one
-    colorscheme py-darcula
+    " colorscheme py-darcula
+    colorscheme onehalflight
 endif
 
 set mousemodel=popup
@@ -227,7 +229,8 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'darcula'
+" let g:airline_theme = 'darcula'
+let g:airline_theme = 'onehalflight'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
