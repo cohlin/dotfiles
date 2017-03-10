@@ -33,7 +33,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
@@ -43,6 +42,9 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
+" Colors
+Plug 'rakr/vim-one'
+Plug 'cohlin/vim-colorschemes'
 
 
 " Ag
@@ -76,13 +78,7 @@ if v:version >= 704
   "" Snippets
   Plug 'FelikZ/ctrlp-py-matcher'
 endif
-
 Plug 'honza/vim-snippets'
-
-"" Color
-Plug 'rakr/vim-one'
-Plug 'cohlin/vim-colorschemes'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 "*****************************************************************************
 "" Custom bundles
@@ -92,7 +88,6 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 "" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
 
 
@@ -174,11 +169,6 @@ set ruler
 set number
 
 let no_buffers_menu=1
-if !exists('g:not_finish_vimplug')
-    "colorscheme one
-    " colorscheme py-darcula
-    colorscheme onehalflight
-endif
 
 set mousemodel=popup
 set t_Co=256
@@ -230,7 +220,8 @@ endif
 
 " vim-airline
 " let g:airline_theme = 'darcula'
-let g:airline_theme = 'onehalflight'
+" let g:airline_theme = 'onehalflight'
+let g:airline_theme = 'one'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
@@ -419,17 +410,8 @@ noremap <leader>w :bn<CR>
 "" Close buffer
 noremap <leader>c :bd<CR>
 
-"" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
-
 " Nerdtree
 map <leader>r :NERDTreeFind<cr>
-
-"" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
