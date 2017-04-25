@@ -45,6 +45,7 @@ Plug 'rking/ag.vim'
 " Colors
 Plug 'rakr/vim-one'
 Plug 'cohlin/vim-colorschemes'
+Plug 'joshdick/onedark.vim'
 
 
 " Ag
@@ -219,9 +220,6 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-" let g:airline_theme = 'darcula'
-" let g:airline_theme = 'onehalflight'
-let g:airline_theme = 'one'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
