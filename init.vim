@@ -43,10 +43,12 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
+
 " Colors
 Plug 'rakr/vim-one'
 Plug 'cohlin/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
+Plug 'flazz/vim-colorschemes'
 
 
 " Ag
@@ -337,7 +339,7 @@ nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
 " Autocomplete
-inoremap <Tab> <C-N>
+inoremap <C-Space> <C-N>
 
 "" Tabs
 nnoremap <silent> <S-t> :tabnew<CR>
@@ -452,15 +454,15 @@ augroup vimrc-python
 augroup END
 
 " jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
+" let g:jedi#popup_on_dot = 0
+" let g:jedi#goto_assignments_command = "<leader>g"
+" let g:jedi#goto_definitions_command = "<leader>d"
+" let g:jedi#documentation_command = "K"
+" let g:jedi#usages_command = "<leader>n"
+" let g:jedi#rename_command = "<leader>r"
+" let g:jedi#show_call_signatures = "0"
+" let g:jedi#completions_command = "<C-Space>"
+" let g:jedi#smart_auto_mappings = 0
 
 
 " vim-airline
@@ -485,7 +487,7 @@ let g:neomake_error_sign = {
 let g:neomake_autolint_enabled=1
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
-let g:neomake_python_enabled_makers = ['pep8']
+let g:neomake_python_enabled_makers = ['flake8']
 autocmd! BufEnter,BufWritePost * Neomake
 
 
