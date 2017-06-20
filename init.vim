@@ -48,7 +48,7 @@ Plug 'rking/ag.vim'
 Plug 'rakr/vim-one'
 Plug 'cohlin/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
-Plug 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
 
 
 " Ag
