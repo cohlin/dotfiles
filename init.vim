@@ -43,6 +43,7 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
+Plug 'tpope/vim-surround'
 
 " Colors
 Plug 'rakr/vim-one'
