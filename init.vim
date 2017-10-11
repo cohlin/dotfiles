@@ -38,7 +38,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
@@ -189,10 +189,10 @@ else
   let g:CSApprox_loaded = 1
 
   " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
+  " let g:indentLine_enabled = 1
+  " let g:indentLine_concealcursor = 0
+  " let g:indentLine_char = '┆'
+  " let g:indentLine_faster = 1
 endif
 
 
