@@ -52,9 +52,6 @@ Plug 'joshdick/onedark.vim'
 " Plug 'flazz/vim-colorschemes'
 
 
-" Ag
-nnoremap <Leader>a :AgFromSearch<CR>
-
 " function! BuildYCM(info)
 "   info is a dictionary with 3 fields
 "   " - name:   name of the plugin
@@ -257,12 +254,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <leader>n :NERDTreeToggle<CR>
 
-" grep.vim
-nnoremap <silent> <leader>f :Rgrep<CR>
-let Grep_Default_Options = '-IR'
-let Grep_Skip_Files = '*.log *.db'
-let Grep_Skip_Dirs = '.git node_modules'
-
 " vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  '$ '
@@ -351,8 +342,8 @@ nnoremap <leader>. :lcd %:p:h<CR>
 "" Opens an edit command with the path of the currently edited file filled in
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-"" Opens a tab edit command with the path of the currently edited file filled
-noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+" Ag
+nnoremap <Leader>f :AgFromSearch<CR>
 
 "" ctrlp.vim
 set wildmode=list:longest,list:full
