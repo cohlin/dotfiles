@@ -309,12 +309,16 @@ set autoread
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
-"" Next buffer
-noremap m :bn<CR>
-
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+
+
+"" Buffer nav
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
 
 "" NerdTree
 nnoremap <silent> <F2> :NERDTreeFind<CR>
@@ -330,23 +334,8 @@ noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
-" session management
-nnoremap <leader>so :OpenSession<Space>
-nnoremap <leader>ss :SaveSession<Space>
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
-
 " Autocomplete
 inoremap <C-Space> <C-N>
-
-"" Tabs
-nnoremap <silent> <S-t> :tabnew<CR>
-
-"" Set working directory
-nnoremap <leader>. :lcd %:p:h<CR>
-
-"" Opens an edit command with the path of the currently edited file filled in
-noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Ag
 nnoremap <Leader>f :AgFromSearch<CR>
@@ -400,12 +389,6 @@ if has('macunix')
   vmap <C-c> :w !pbcopy<CR><CR>
 endif
 
-"" Buffer nav
-noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
-
 "" Close buffer
 noremap <leader>c :bd<CR>
 
@@ -419,9 +402,6 @@ vmap > >gv
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-
-"" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
