@@ -314,20 +314,22 @@ noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
 
+" Nerdtree
+map <leader>r :NERDTreeFind<cr>
+nnoremap <silent> <F2> :NERDTreeFind<CR>
+noremap <leader>n :NERDTreeToggle<CR>
+
 "" Buffer nav
 noremap <leader>z :bp<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>x :bn<CR>
 noremap <leader>w :bn<CR>
 
-"" NerdTree
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-noremap <leader>n :NERDTreeToggle<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gp :Gpush<CR>
 noremap <Leader>gll :Gpull<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
@@ -391,9 +393,6 @@ endif
 
 "" Close buffer
 noremap <leader>c :bd<CR>
-
-" Nerdtree
-map <leader>r :NERDTreeFind<cr>
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
