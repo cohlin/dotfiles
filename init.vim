@@ -253,8 +253,6 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 30
 let g:NERDTreeMinimalUI = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-nnoremap <silent> <F2> :NERDTreeFind<CR>
-noremap <leader>n :NERDTreeToggle<CR>
 
 " vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -311,10 +309,16 @@ set autoread
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
+"" Next buffer
+noremap m :bn<CR>
 
 "" Split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
+
+"" NerdTree
+nnoremap <silent> <F2> :NERDTreeFind<CR>
+noremap <leader>n :NERDTreeToggle<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
