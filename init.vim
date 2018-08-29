@@ -51,6 +51,7 @@ Plug 'cohlin/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
 Plug 'dracula/vim'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'morhetz/gruvbox'
 
 " Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
