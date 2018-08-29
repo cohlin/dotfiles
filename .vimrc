@@ -171,3 +171,4 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 colorscheme one " xcode-default py-darcula
+autocmd filetype crontab setlocal nobackup nowritebackup
