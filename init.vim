@@ -49,6 +49,10 @@ Plug 'tpope/vim-surround'
 Plug 'rakr/vim-one'
 Plug 'cohlin/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
+Plug 'dracula/vim'
+
+" Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'flazz/vim-colorschemes'
 
 
@@ -253,6 +257,9 @@ let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
 let g:NERDTreeWinSize = 30
 let g:NERDTreeMinimalUI = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 
 " vimshell.vim
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
