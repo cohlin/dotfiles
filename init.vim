@@ -44,6 +44,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe'
 
 " Colors
 Plug 'rakr/vim-one'
