@@ -44,7 +44,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe'
 
 " Colors
 Plug 'rakr/vim-one'
@@ -61,15 +60,15 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'flazz/vim-colorschemes'
 
 
-" function! BuildYCM(info)
-"   info is a dictionary with 3 fields
-"   " - name:   name of the plugin
-"   " - status: 'installed', 'updated', or 'unchanged' " - force:  set on PlugInstall! or PlugUpdate!
-"   if a:info.status == 'installed' || a:info.force
-"     !./install.py
-"   endif
-" endfunction
-" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+function! BuildYCM(info)
+  info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged' " - force:  set on PlugInstall! or PlugUpdate!
+  if a:info.status == 'installed' || a:info.force
+    !./install.py
+  endif
+endfunction
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 let g:make = 'gmake'
 if exists('make')
