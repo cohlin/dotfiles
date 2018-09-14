@@ -38,7 +38,6 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
-" Plug 'Yggdroot/indentLine'
 Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
@@ -55,9 +54,7 @@ Plug 'morhetz/gruvbox'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 
-" Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Plug 'flazz/vim-colorschemes'
 
 
 function! BuildYCM(info)
@@ -90,6 +87,7 @@ if v:version >= 704
 endif
 Plug 'honza/vim-snippets'
 
+
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
@@ -104,11 +102,6 @@ Plug 'mattn/emmet-vim'
 " javascript
 "" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
-
-
-" python
-"" Python Bundle
-" Plug 'davidhalter/jedi-vim'
 
 
 "*****************************************************************************
@@ -192,12 +185,6 @@ if has("gui_running")
   endif
 else
   let g:CSApprox_loaded = 1
-
-  " IndentLine
-  " let g:indentLine_enabled = 1
-  " let g:indentLine_concealcursor = 0
-  " let g:indentLine_char = '┆'
-  " let g:indentLine_faster = 1
 endif
 
 
@@ -330,12 +317,6 @@ map <leader>r :NERDTreeFind<cr>
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <leader>n :NERDTreeToggle<CR>
 
-"" Buffer nav
-noremap <leader>z :bp<CR>
-noremap <leader>q :bp<CR>
-noremap <leader>x :bn<CR>
-noremap <leader>w :bn<CR>
-
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
@@ -440,18 +421,6 @@ augroup vimrc-python
       \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
-
-" jedi-vim
-" let g:jedi#popup_on_dot = 0
-" let g:jedi#goto_assignments_command = "<leader>g"
-" let g:jedi#goto_definitions_command = "<leader>d"
-" let g:jedi#documentation_command = "K"
-" let g:jedi#usages_command = "<leader>n"
-" let g:jedi#rename_command = "<leader>r"
-" let g:jedi#show_call_signatures = "0"
-" let g:jedi#completions_command = "<C-Space>"
-" let g:jedi#smart_auto_mappings = 0
-
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
