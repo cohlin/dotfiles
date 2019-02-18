@@ -43,7 +43,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
-Plug 'integralist/vim-mypy'
+" Plug 'integralist/vim-mypy'
 
 " Colors
 Plug 'rakr/vim-one'
@@ -67,6 +67,18 @@ function! BuildYCM(info)
   endif
 endfunction
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar': 1,
+      \ 'qf': 1,
+      \ 'notes': 1,
+      \ 'markdown': 1,
+      \ 'unite': 1,
+      \ 'text': 1,
+      \ 'vimwiki': 1,
+      \ 'pandoc': 1,
+      \ 'infolog': 1,
+      \ 'mail': 1
+      \}
 
 let g:make = 'gmake'
 if exists('make')
