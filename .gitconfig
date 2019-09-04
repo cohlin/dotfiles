@@ -23,5 +23,20 @@
 	last = log -1 HEAD
 	plog = log --pretty=\"%C(Yellow)%h  %C(reset)%ad (%C(Green)%cr%C(reset))%x09 %C(Cyan)%an: %C(reset)%s\"
 	pllog = log --pretty=format:\"%C(yellow)%h %ar %C(auto)%d %Creset %s , %Cblue%cn\" --graph --all
+	jubba = init
+	abekatta = clone
+	asa = pull
+	prega = push
+	fedeprega = push --force
+	pela = fetch
+	spaga = branch
+	asso = add
+	hutta = commit
+	nimma = rebase
+	klydda = merge
+	tocka = stash
+	pelaparor = cherry-pick
+	gaffla = blame
+	henka = checkout
 [core]
 	editor = vim

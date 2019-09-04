@@ -59,7 +59,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 
 function! BuildYCM(info)
-  info is a dictionary with 3 fields
+  " info is a dictionary with 3 fields
   " - name:   name of the plugin
   " - status: 'installed', 'updated', or 'unchanged' " - force:  set on PlugInstall! or PlugUpdate!
   if a:info.status == 'installed' || a:info.force
@@ -419,12 +419,12 @@ augroup END
 
 " python
 " vim-python
-augroup vimrc-python
-  autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=4
-      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-augroup END
+" augroup vimrc-python
+"   autocmd!
+"   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+"       \ formatoptions+=croq softtabstop=4
+"       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+" augroup END
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
