@@ -39,4 +39,4 @@
 	gaffla = blame
 	henka = checkout
 [core]
-	editor = vim
+	editor = nvim

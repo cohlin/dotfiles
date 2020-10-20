@@ -33,7 +33,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/CSApprox'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
@@ -43,9 +42,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
-" Plug 'integralist/vim-mypy'
 
 " Colors
+Plug 'vim-scripts/CSApprox'
 Plug 'rakr/vim-one'
 Plug 'cohlin/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
@@ -66,6 +65,8 @@ function! BuildYCM(info)
     !./install.py
   endif
 endfunction
+
+" Should only appear in local_nvim
 " Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 " let g:ycm_filetype_blacklist = {
 "       \ 'tagbar': 1,
@@ -324,16 +325,6 @@ nnoremap <silent> <F2> :NERDTreeFind<CR>
 noremap <leader>n :NERDTreeToggle<CR>
 
 
-"" Git
-noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gp :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
-
 " Autocomplete
 inoremap <C-Space> <C-N>
 
@@ -419,21 +410,13 @@ augroup vimrc-javascript
 augroup END
 
 
-" python
-" vim-python
-" augroup vimrc-python
-"   autocmd!
-"   autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
-"       \ formatoptions+=croq softtabstop=4
-"       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
-" augroup END
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 
 " Syntax highlight
 " Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
+" let g:polyglot_disabled = ['']
 let python_highlight_all = 1
 
 
