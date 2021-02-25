@@ -53,6 +53,7 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'morhetz/gruvbox'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
+Plug 'arzg/vim-colors-xcode'
 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
