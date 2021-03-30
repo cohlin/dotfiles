@@ -7,9 +7,6 @@ endif
 
 let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "html,javascript,python"
-let g:vim_bootstrap_editor = "nvim"				" nvim or vim
-
 if !filereadable(vimplug_exists)
   echo "Installing Vim-Plug..."
   echo ""
@@ -37,7 +34,6 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sleuth'
-Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
@@ -265,13 +261,6 @@ let g:NERDTreePatternMatchHighlightFullName = 0
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  '$ '
 
-" terminal emulation
-if g:vim_bootstrap_editor == 'nvim'
-  nnoremap <silent> <leader>sh :terminal<CR>
-else
-  nnoremap <silent> <leader>sh :VimShellCreate<CR>
-endif
-
 "*****************************************************************************
 "" Functions
 "*****************************************************************************
@@ -310,8 +299,6 @@ augroup vimrc-make-cmake
   autocmd FileType make setlocal noexpandtab
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
-
-autocmd BufWritePre *.py execute ':Black'
 
 set autoread
 
@@ -437,7 +424,7 @@ let g:neomake_error_sign = {
 let g:neomake_autolint_enabled=1
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
-" let g:neomake_python_enabled_makers = ['black']
+let g:neomake_python_enabled_makers = ['flake8']
 autocmd! BufEnter,BufWritePost * Neomake
 
 
