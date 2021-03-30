@@ -42,6 +42,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'rking/ag.vim'
 Plug 'tpope/vim-surround'
+Plug 'ambv/black'
 
 " Colors
 Plug 'vim-scripts/CSApprox'
@@ -310,6 +311,8 @@ augroup vimrc-make-cmake
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
 augroup END
 
+autocmd BufWritePre *.py execute ':Black'
+
 set autoread
 
 "*****************************************************************************
@@ -434,7 +437,7 @@ let g:neomake_error_sign = {
 let g:neomake_autolint_enabled=1
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
-let g:neomake_python_enabled_makers = ['flake8']
+" let g:neomake_python_enabled_makers = ['black']
 autocmd! BufEnter,BufWritePost * Neomake
 
 
